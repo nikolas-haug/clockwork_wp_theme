@@ -1732,7 +1732,7 @@ footer {
 .sidebar-item {
   background: #eee;
   padding: 1rem 1.5rem;
-  margin: 1rem 0;
+  margin-bottom: 1.5rem;
   border-radius: .3rem; }
 
 .testimonial-block {

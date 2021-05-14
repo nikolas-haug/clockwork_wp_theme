@@ -17,7 +17,12 @@ add_action('widgets_init', 'clockwork_widgets');
 add_action('customize_register', 'clockwork_customize_register');
 add_action('init', 'clockwork_custom_post_types');
 
-// Shortcodes
+// Filters
+function custom_excerpt_length($length)
+{
+    return 15;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 // Custom
 include get_theme_file_path('/custom/custom-bg-callback.php');
