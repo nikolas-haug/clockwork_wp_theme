@@ -104,8 +104,8 @@ footer {
     width: 100%;
     text-align: center;
     z-index: 99;
-    @media (max-width: 755px) {
-        bottom: 0;
+    @media (max-width: 755px) { 
+        bottom: -15%;
     }
     .button {
         padding: 1.5rem 2.5rem;

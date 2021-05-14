@@ -1766,7 +1766,7 @@ footer {
   z-index: 99; }
   @media (max-width: 755px) {
     .hero--cta {
-      bottom: 0; } }
+      bottom: -15%; } }
   .hero--cta .button {
     padding: 1.5rem 2.5rem;
     font-size: 1.8rem;
