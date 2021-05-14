@@ -1,3 +1,5 @@
+</main>
+
 <footer class="main-footer">
     <div class="container-lg">
         <div class="row main-footer__content">

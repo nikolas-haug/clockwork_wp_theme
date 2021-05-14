@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Page with Sidebar
+ */
+?>
+
 <?php get_header();?>
 
 <?php if (have_posts()): ?>
@@ -17,9 +23,13 @@
 <!-- Main content -->
 <div class="container-lg">
     <div class="row">
-        <div class="col-lg-12">
-            <h2 class="sub-title"><?php the_title();?></h2>
+        <div class="col-med-8">
             <?php the_content();?>
+        </div>
+        <div class="col-med-4">
+            <?php if (is_active_sidebar('sidebar')): ?>
+            <?php dynamic_sidebar('sidebar');?>
+            <?php endif;?>
         </div>
     </div>
 </div>

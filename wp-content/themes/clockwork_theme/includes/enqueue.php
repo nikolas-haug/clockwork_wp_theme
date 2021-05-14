@@ -14,7 +14,7 @@ function clockwork_enqueue()
     // STYLES
     wp_register_style('font-awesome', $uri . '/css/font-awesome.css', [], $ver);
     wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap', [], $ver);
-    wp_register_style('google-fonts-2', 'https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap', [], $ver);
+    wp_register_style('google-fonts-2', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap', [], $ver);
     wp_register_style('main-style', get_stylesheet_uri(), [], $ver);
 
     wp_enqueue_style('font-awesome');

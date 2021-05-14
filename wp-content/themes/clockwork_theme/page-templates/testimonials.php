@@ -9,17 +9,15 @@ Template Name: Testimonials
 <?php if (have_posts()): ?>
 <?php while (have_posts()): the_post();?>
 
-<main>
-    <!-- Main content -->
-    <div class="container-med">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="sub-title"><?php the_title();?></h2>
-                <?php the_content();?>
-            </div>
+<!-- Main content -->
+<div class="container-lg">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="sub-title"><?php the_title();?></h2>
+            <?php the_content();?>
         </div>
     </div>
-</main>
+</div>
 
 <?php endwhile;?>
 <?php endif;?>
