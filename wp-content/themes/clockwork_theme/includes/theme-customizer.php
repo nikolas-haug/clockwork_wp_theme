@@ -52,13 +52,24 @@ function clockwork_customize_register($wp_customize)
     }
     // SOCIAL SECTION ***************************************
     $wp_customize->add_section('icons', array(
-        'title' => __('Icons', 'clockwork'),
-        'description' => sprintf(__('Options for footer icons', 'clockwork')),
+        'title' => __('Footer Icons', 'clockwork'),
+        'description' => sprintf(__('Options for footer icons - see https://fontawesome.com/ for icon class names', 'clockwork')),
         'priority' => 130,
     ));
 
     // icon 1
 
+    // icon 1 name setting
+    $wp_customize->add_setting('icon1_name', array(
+        'default' => _x('name', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    // icon 1 name control
+    $wp_customize->add_control('icon1_name', array(
+        'label' => __('icon 1 name (for accessibility)', 'clockwork'),
+        'section' => 'icons',
+        'priority' => 20,
+    ));
     // icon 1 url setting
     $wp_customize->add_setting('icon1_url', array(
         'default' => _x('url', 'clockwork'),
@@ -77,13 +88,24 @@ function clockwork_customize_register($wp_customize)
     ));
     // icon 1 text control
     $wp_customize->add_control('icon1_icon', array(
-        'label' => __('icon 1 Icon', 'clockwork'),
+        'label' => __('icon 1 Icon (fontawesome class name)', 'clockwork'),
         'section' => 'icons',
         'priority' => 20,
     ));
 
     // icon 2
 
+    // icon 2 name setting
+    $wp_customize->add_setting('icon2_name', array(
+        'default' => _x('name', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    // icon 2 name control
+    $wp_customize->add_control('icon2_name', array(
+        'label' => __('icon 2 name (for accessibility)', 'clockwork'),
+        'section' => 'icons',
+        'priority' => 20,
+    ));
     // icon 2 url setting
     $wp_customize->add_setting('icon2_url', array(
         'default' => _x('url', 'clockwork'),
@@ -102,13 +124,24 @@ function clockwork_customize_register($wp_customize)
     ));
     // icon 2 text control
     $wp_customize->add_control('icon2_icon', array(
-        'label' => __('icon 2 Icon', 'clockwork'),
+        'label' => __('icon 2 Icon (fontawesome class name)', 'clockwork'),
         'section' => 'icons',
         'priority' => 20,
     ));
 
     // icon 3
 
+    // icon 3 name setting
+    $wp_customize->add_setting('icon3_name', array(
+        'default' => _x('name', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    // icon 3 name control
+    $wp_customize->add_control('icon3_name', array(
+        'label' => __('icon 3 name (for accessibility)', 'clockwork'),
+        'section' => 'icons',
+        'priority' => 20,
+    ));
     // icon 3 url setting
     $wp_customize->add_setting('icon3_url', array(
         'default' => _x('url', 'clockwork'),
@@ -127,43 +160,43 @@ function clockwork_customize_register($wp_customize)
     ));
     // icon 3 text control
     $wp_customize->add_control('icon3_icon', array(
-        'label' => __('icon 3 Icon', 'clockwork'),
+        'label' => __('icon 3 Icon (fontawesome class name)', 'clockwork'),
         'section' => 'icons',
         'priority' => 20,
     ));
 
-    // WELCOME BANNER BUTTON
+    // HERO SECTION
     $wp_customize->add_section('call_to_action', array(
         'title' => __('Hero Section', 'clockwork'),
         'description' => sprintf(__('Add a custom call to action button.', 'clockwork')),
         'priority' => 100,
     ));
 
-    $wp_customize->add_setting('welcome_heading', array(
+    $wp_customize->add_setting('hero_heading', array(
         'default' => _x('a wordpress theme by you', 'clockwork'),
         'type' => 'theme_mod',
     ));
-    $wp_customize->add_control('welcome_heading', array(
+    $wp_customize->add_control('hero_heading', array(
         'label' => __('Hero Heading', 'clockwork'),
         'section' => 'call_to_action',
         'priority' => 20,
     ));
 
-    $wp_customize->add_setting('welcome_button', array(
+    $wp_customize->add_setting('hero_button', array(
         'default' => _x('action!', 'clockwork'),
         'type' => 'theme_mod',
     ));
-    $wp_customize->add_control('welcome_button', array(
+    $wp_customize->add_control('hero_button', array(
         'label' => __('Button Text', 'clockwork'),
         'section' => 'call_to_action',
         'priority' => 20,
     ));
 
-    $wp_customize->add_setting('welcome_button_route', array(
+    $wp_customize->add_setting('hero_button_route', array(
         'default' => _x('page name', 'clockwork'),
         'type' => 'theme_mod',
     ));
-    $wp_customize->add_control('welcome_button_route', array(
+    $wp_customize->add_control('hero_button_route', array(
         'label' => __('Linked Page Name (leave empty for no button)', 'clockwork'),
         'section' => 'call_to_action',
         'priority' => 20,
