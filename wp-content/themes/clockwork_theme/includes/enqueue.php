@@ -1,6 +1,6 @@
 <?php
 
-function watercress_enqueue()
+function clockwork_enqueue()
 {
     $uri = get_theme_file_uri();
 
@@ -9,11 +9,11 @@ function watercress_enqueue()
     define('THEME_VERSION', $theme->Version); // gets version written in your style.css
 
     // append query string to asset files depending on dev or production mode
-    $ver = WATERCRESS_DEV_MODE ? time() : THEME_VERSION;
+    $ver = CLOCKWORK_DEV_MODE ? time() : THEME_VERSION;
 
     // STYLES
     wp_register_style('font-awesome', $uri . '/css/font-awesome.css', [], $ver);
-    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet', [], $ver);
+    wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,700&family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap', [], $ver);
     wp_register_style('main-style', get_stylesheet_uri(), [], $ver);
 
     wp_enqueue_style('font-awesome');
