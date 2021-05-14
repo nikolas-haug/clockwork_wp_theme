@@ -23,7 +23,7 @@
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 if (has_custom_logo()) {
-    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="img-cover" style="max-width: 150px;">';
+    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="img-100" style="max-width: 150px;">';
 } else {
     echo '<h1>' . get_bloginfo('name') . '</h1>';
 }
