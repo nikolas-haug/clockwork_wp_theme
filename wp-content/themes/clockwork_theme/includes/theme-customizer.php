@@ -21,12 +21,12 @@ function clockwork_customize_register($wp_customize)
     $colors = array();
     $colors[] = array(
         'slug' => 'content_text_color',
-        'default' => '#fff',
+        // 'default' => '#fff',
         'label' => __('Content Text Color', 'clockwork'),
     );
     $colors[] = array(
         'slug' => 'content_link_color',
-        'default' => '#3C2E37',
+        // 'default' => '#3C2E37',
         'label' => __('Content Link Color', 'clockwork'),
     );
     foreach ($colors as $color) {
@@ -134,9 +134,19 @@ function clockwork_customize_register($wp_customize)
 
     // WELCOME BANNER BUTTON
     $wp_customize->add_section('call_to_action', array(
-        'title' => __('Hero Button', 'clockwork'),
+        'title' => __('Hero Section', 'clockwork'),
         'description' => sprintf(__('Add a custom call to action button.', 'clockwork')),
         'priority' => 100,
+    ));
+
+    $wp_customize->add_setting('welcome_heading', array(
+        'default' => _x('a wordpress theme by you', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    $wp_customize->add_control('welcome_heading', array(
+        'label' => __('Hero Heading', 'clockwork'),
+        'section' => 'call_to_action',
+        'priority' => 20,
     ));
 
     $wp_customize->add_setting('welcome_button', array(
@@ -154,7 +164,7 @@ function clockwork_customize_register($wp_customize)
         'type' => 'theme_mod',
     ));
     $wp_customize->add_control('welcome_button_route', array(
-        'label' => __('Linked Page Name', 'clockwork'),
+        'label' => __('Linked Page Name (leave empty for no button)', 'clockwork'),
         'section' => 'call_to_action',
         'priority' => 20,
     ));

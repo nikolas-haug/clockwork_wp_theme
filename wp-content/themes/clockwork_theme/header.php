@@ -8,6 +8,25 @@
     <title><?php bloginfo('name');?></title>
     <meta name="description" content="<?php bloginfo('description');?>">
     <?php wp_head();?>
+
+    <!-- Customizer - colors -->
+    <?php
+$content_text_color = get_option('content_text_color');
+$content_link_color = get_option('content_link_color');
+?>
+    <style>
+    p {
+        color: <?php echo $content_text_color;
+        ?>;
+    }
+
+    a {
+        color: <?php echo $content_link_color;
+        ?> !important;
+    }
+    </style>
+    <!-- end customizer -->
+
 </head>
 
 <body <?php body_class();?>>

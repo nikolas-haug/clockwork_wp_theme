@@ -19,12 +19,17 @@ Template Name: Welcome Page
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="<?php the_title();?>"
                     class="img-100">
                 <?php endif;?>
-                <?php if (get_theme_mod('welcome_button_route', '')): ?>
-                <?php $action_route = get_theme_mod('welcome_button_route', '');?>
-                <a href="<?php echo esc_url(site_url('/' . $action_route)); ?>" class="button btn--booking btn--fixed">
-                    <?php echo get_theme_mod('welcome_button', ''); ?>
-                </a>
-                <?php endif;?>
+                <div class="hero--cta">
+                    <?php if (get_theme_mod('welcome_heading', '')): ?>
+                    <h2><?php echo get_theme_mod('welcome_heading', 'fdafdafsdfa'); ?></h2>
+                    <?php endif;?>
+                    <?php if (get_theme_mod('welcome_button_route', '')): ?>
+                    <?php $action_route = get_theme_mod('welcome_button_route', '');?>
+                    <a href="<?php echo esc_url(site_url('/' . $action_route)); ?>" class="button">
+                        <?php echo get_theme_mod('welcome_button', ''); ?>
+                    </a>
+                    <?php endif;?>
+                </div>
             </div>
         </div>
     </div>
