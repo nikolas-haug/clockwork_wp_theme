@@ -20,7 +20,7 @@
         <div class="col-med-8">
             <?php if (have_posts()): ?>
             <?php while (have_posts()): the_post();?>
-            <div class="container-stretch">
+            <div class="container-stretch padding-right-zero padding-left-zero">
                 <div class="row">
                     <div class="col-med-8">
                         <h2>

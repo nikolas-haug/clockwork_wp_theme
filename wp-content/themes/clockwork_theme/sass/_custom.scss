@@ -98,6 +98,19 @@ footer {
     padding: 1rem 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: .3rem;
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+    }
+}
+
+[class*="widget_"] {
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding: 0;
+    }
 }
 
 // Testimonials
