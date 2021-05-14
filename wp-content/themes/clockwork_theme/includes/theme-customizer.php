@@ -131,4 +131,31 @@ function clockwork_customize_register($wp_customize)
         'section' => 'icons',
         'priority' => 20,
     ));
+
+    // WELCOME BANNER BUTTON
+    $wp_customize->add_section('call_to_action', array(
+        'title' => __('Hero Button', 'clockwork'),
+        'description' => sprintf(__('Add a custom call to action button.', 'clockwork')),
+        'priority' => 100,
+    ));
+
+    $wp_customize->add_setting('welcome_button', array(
+        'default' => _x('action!', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    $wp_customize->add_control('welcome_button', array(
+        'label' => __('Button Text', 'clockwork'),
+        'section' => 'call_to_action',
+        'priority' => 20,
+    ));
+
+    $wp_customize->add_setting('welcome_button_route', array(
+        'default' => _x('page name', 'clockwork'),
+        'type' => 'theme_mod',
+    ));
+    $wp_customize->add_control('welcome_button_route', array(
+        'label' => __('Linked Page Name', 'clockwork'),
+        'section' => 'call_to_action',
+        'priority' => 20,
+    ));
 }

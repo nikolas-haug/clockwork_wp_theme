@@ -20,9 +20,12 @@ Template Name: Welcome Page
                     class="img-100">
                 <?php endif;?>
                 <!-- TODO: add button data to customizer -->
-                <a href="<?php echo esc_url(site_url('/booking')); ?>" class="button btn--booking btn--fixed">
-                    book now
+                <?php if (get_theme_mod('welcome_button_route', '')): ?>
+                <?php $action_route = get_theme_mod('welcome_button_route', '');?>
+                <a href="<?php echo esc_url(site_url('/' . $action_route)); ?>" class="button btn--booking btn--fixed">
+                    <?php echo get_theme_mod('welcome_button', ''); ?>
                 </a>
+                <?php endif;?>
             </div>
         </div>
     </div>
