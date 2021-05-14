@@ -18,11 +18,11 @@
 <div class="container-lg">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="sub-title"><?php the_title();?></h2>
+            <h2><?php the_title();?></h2>
             <div class="meta">
                 Posted on
                 <?php the_time('F j, Y g:i a');?>
-                by
+                &middot; by
                 <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author();?></a>
             </div>
             <?php the_content();?>

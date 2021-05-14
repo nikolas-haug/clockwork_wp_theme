@@ -168,7 +168,7 @@ function clockwork_customize_register($wp_customize)
     // HERO SECTION
     $wp_customize->add_section('call_to_action', array(
         'title' => __('Hero Section', 'clockwork'),
-        'description' => sprintf(__('Add a custom call to action button.', 'clockwork')),
+        'description' => sprintf(__('Add details to the hero section of the welcome template.', 'clockwork')),
         'priority' => 100,
     ));
 

@@ -1796,8 +1796,12 @@ footer {
   margin-left: 0;
   padding: 0; }
 
+.posts-heading {
+  margin-bottom: 3.5rem; }
+
 .meta {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem; }
 
 .testimonial-block {
   background: #ebebeb;

@@ -1,19 +1,31 @@
 <?php get_header();?>
 
+<!-- posts heading -->
+<div class="container-lg">
+    <h2 class="posts-heading">
+        <?php
 
+$posts_page_title = get_the_title(get_option('page_for_posts', true));
 
-<!-- Post image -->
-<!-- <div class="container-stretch container-lg">
-    <div class="row">
-        <div class="col-lg-12 pad-sm-0">
-            <div class="container--booking">
-                <?php if (has_post_thumbnail()): ?>
-                <?php the_post_thumbnail('full', array('class' => 'img-100'));?>
-                <?php endif;?>
-            </div>
-        </div>
-    </div>
-</div> -->
+if (is_category()) {
+    single_cat_title();
+} else if (is_author()) {
+    the_post();
+    echo 'Archives by Author: ' . get_the_author();
+    rewind_posts();
+} else if (is_tag()) {
+    single_tag_title();
+} else if (is_day()) {
+    echo 'Archives by Day: ' . get_the_date();
+} else if (is_month()) {
+    echo 'Archives by Month ' . get_the_date('F Y');
+} else if (is_year()) {
+    echo 'Archives by Year ' . get_the_date('Y');
+} else {
+    echo $posts_page_title;
+}
+?>
+</div>
 <!-- Main content -->
 <div class="container-lg">
     <div class="row">
@@ -23,12 +35,13 @@
             <div class="container-stretch padding-right-zero padding-left-zero">
                 <div class="row">
                     <div class="col-med-8">
+                        </h2>
                         <h2>
                             <a href="<?php echo the_permalink(); ?>"><?php the_title();?></a>
                         </h2>
                         <div class="meta">
-                            <?php the_time('F j, Y g:i a');?>
-                            by
+                            <em><?php the_time('F j, Y g:i a');?></em>
+                            &middot; by
                             <a
                                 href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author();?></a>
                         </div>
