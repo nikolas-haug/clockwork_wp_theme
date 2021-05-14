@@ -1,15 +1,15 @@
 <?php get_header();?>
 
 <!-- Hero image -->
-<div class="container-lg">
+<section class="container-lg">
     <div class="row">
         <div class="col-lg-12">
             <h2>Search Results:</h2>
         </div>
     </div>
-</div>
+</section>
 <!-- Main content -->
-<div class="container-lg">
+<section class="container-lg">
     <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post();?>
     <div class="row">
@@ -30,7 +30,7 @@
         </div>
     </div>
     <?php endif;?>
-</div>
+</section>
 
 
 <?php get_footer();?>

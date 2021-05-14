@@ -10,7 +10,7 @@ Template Name: Page with Sidebar
 <?php while (have_posts()): the_post();?>
 
 <!-- Main content -->
-<div class="container-lg">
+<section class="container-lg">
     <div class="row">
         <div class="col-med-8">
             <?php if (has_post_thumbnail()): ?>
@@ -26,7 +26,7 @@ Template Name: Page with Sidebar
             <?php endif;?>
         </div>
     </div>
-</div>
+</section>
 
 <?php endwhile;?>
 <?php endif;?>

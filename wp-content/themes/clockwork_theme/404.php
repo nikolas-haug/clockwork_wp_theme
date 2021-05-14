@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <!-- Main content -->
-<div class="container-lg">
+<section class="container-lg">
     <div class="row">
         <div class="col-lg-12">
             <h2 class="sub-title">Oops! That page can’t be found.</h2>
@@ -17,6 +17,6 @@
             </form>
         </div>
     </div>
-</div>
+</section>
 
 <?php get_footer();?>
