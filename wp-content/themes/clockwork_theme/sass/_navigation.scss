@@ -97,11 +97,16 @@
   font-size: 1.6rem;
   padding: 1rem;
   color: $color-link;
-  transition: all .3s;
+  border-radius: 3px;
+  transition: all .2s;
+  &:hover {
+    background-color: $color-tertiary;
+    color: $color-white;
+  }
 }
-.slider-menu ul li a:hover {
-    color: $color-link-hover;
-}
+// .slider-menu ul li a:hover {
+//     color: $color-link-hover;
+// }
 /* 
  * MEDIA QUERIES - Mobile view
 */
