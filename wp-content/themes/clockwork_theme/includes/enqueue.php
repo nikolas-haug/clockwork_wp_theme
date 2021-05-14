@@ -27,7 +27,6 @@ function clockwork_enqueue()
     wp_register_script('scroll_js', $uri . '/js/scroll.js', [], $ver, true);
     wp_register_script('main_js', $uri . '/js/main.js', [], $ver, true);
 
-    wp_enqueue_script('jquery');
     wp_enqueue_script('navigation_js');
     wp_enqueue_script('scroll_js');
     wp_enqueue_script('main_js');

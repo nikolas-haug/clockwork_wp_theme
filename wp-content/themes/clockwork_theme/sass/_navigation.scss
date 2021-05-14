@@ -29,11 +29,17 @@
   z-index: 999;
   height: 44px;
   width: 44px;
+  border-color: transparent;
   border-radius: 5px;
   cursor: pointer;
   display: none;
   align-items: center;
-  background: $color-grey-light;
+  background-color: $color-grey-light;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $color-grey-light;
+  }
 }
 .slider-menu__toggler span {
     left: 8px;
@@ -51,9 +57,11 @@
 }
 .slider-menu__toggler span::before {
   top: -8px;
+  right: 0;
 }
 .slider-menu__toggler span::after {
   top: 8px;
+  left: 0;
 }
 .slider-menu__toggler.active > span {
   background: transparent;

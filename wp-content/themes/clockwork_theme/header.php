@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes();?>">
+<html <?php language_attributes();?>>
 
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,8 @@ if (has_custom_logo()) {
 }
 ?>
                     </a>
-                    <div class="slider-menu__toggler"><span></span></div>
+                    <button aria-label="navigation menu toggle button"
+                        class="slider-menu__toggler"><span></span></button>
                 </div>
                 <div class="col-sm-12 col-lg-10 align-self-center">
                     <h1 class="title-tag">
@@ -63,12 +64,11 @@ if (has_custom_logo()) {
     <nav class="container-lg">
         <div class="row">
             <div class="col-12">
-                <nav class="slider-menu">
+                <nav class="slider-menu" aria-label="navigation menu">
                     <?php wp_nav_menu(array(
     'theme_location' => 'primary',
 ));?>
                 </nav>
-                <!-- <div class="slider-menu__toggler"><span></span></div> -->
             </div>
         </div>
     </nav>
