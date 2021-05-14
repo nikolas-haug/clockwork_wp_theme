@@ -229,6 +229,20 @@
     align-items: center;
 }
 
+.visually-hidden { 
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 // No margins and paddings and content placement for different breakpoints
 @include x-small-breakpoint {
     .pad-sm-0 {
