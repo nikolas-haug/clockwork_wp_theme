@@ -27,7 +27,7 @@ $global-background-color: $color-white;
 
 // Links
 $color-link: $color-secondary;
-$color-link-hover: darken($color-link, 10%);
+$color-link-hover: lighten($color-link, 10%);
 
 //=====================================================
 // CONTAINERS
@@ -165,7 +165,7 @@ $buttons: (".button, a.button, button, [type=submit], [type=reset], [type=button
 // Colors
 $button-background-color: $color-primary;
 $button-color: $color-grey-light; 
-$button-background-hover: darken($button-background-color, 10%);
+$button-background-hover: lighten($button-background-color, 10%);
 
 // Typography
 $button-font-weight: 400;

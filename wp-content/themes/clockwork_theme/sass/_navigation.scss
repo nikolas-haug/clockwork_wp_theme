@@ -24,18 +24,17 @@
  * MENU BUTTON
  */
  .slider-menu__toggler {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  // top: 20px;
   right: 20px;
   z-index: 999;
   height: 44px;
   width: 44px;
-  border-radius: 50%;
+  border-radius: 5px;
   cursor: pointer;
   display: none;
   align-items: center;
-  background: $color-link;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  background: $color-grey-light;
 }
 .slider-menu__toggler span {
     left: 8px;
@@ -47,7 +46,7 @@
   content: "";
   width: 28px;
   height: 2.5px;
-  background: $color-white;
+  background: $color-secondary;
   border-radius: 20px;
   transition: .3s cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -62,7 +61,7 @@
 }
 .slider-menu__toggler.active > span::before,
 .slider-menu__toggler.active > span::after {
-  background: darken($color-white, 15%);
+  background: darken($color-secondary, 15%);
   top: 0px;
 }
 .slider-menu__toggler.active > span::before {

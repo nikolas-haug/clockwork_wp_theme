@@ -36,18 +36,19 @@ $content_link_color = get_option('content_link_color');
     <header class="main-header">
         <div class="container-lg">
             <div class="row">
-                <div class="col-sm-12 col-lg-2">
+                <div class="col-sm-12 col-lg-2 pos-relative dis-flex align-items-center">
                     <a href="<?php echo esc_url(site_url('/')); ?>">
                         <?php
 $custom_logo_id = get_theme_mod('custom_logo');
 $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 if (has_custom_logo()) {
-    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="img-100" style="max-width: 150px;">';
+    echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="img-100 custom-logo">';
 } else {
     echo '<h1>' . get_bloginfo('name') . '</h1>';
 }
 ?>
                     </a>
+                    <div class="slider-menu__toggler"><span></span></div>
                 </div>
                 <div class="col-sm-12 col-lg-10 align-self-center">
                     <h1 class="title-tag">
@@ -66,7 +67,7 @@ if (has_custom_logo()) {
     'theme_location' => 'primary',
 ));?>
                 </nav>
-                <div class="slider-menu__toggler"><span></span></div>
+                <!-- <div class="slider-menu__toggler"><span></span></div> -->
             </div>
         </div>
     </nav>

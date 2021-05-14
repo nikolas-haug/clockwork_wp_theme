@@ -406,7 +406,7 @@ a {
   color: #46876D;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #356552;
+    color: #58a888;
     text-decoration: underline; }
 
 ::selection {
@@ -440,7 +440,7 @@ a {
 
 .button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
   border: 1px solid #002821;
-  background: #002821;
+  background: #008e73;
   color: #ebebeb;
   text-decoration: none; }
 
@@ -791,18 +791,16 @@ kbd {
  * MENU BUTTON
  */
 .slider-menu__toggler {
-  position: fixed;
-  top: 20px;
+  position: absolute;
   right: 20px;
   z-index: 999;
   height: 44px;
   width: 44px;
-  border-radius: 50%;
+  border-radius: 5px;
   cursor: pointer;
   display: none;
   align-items: center;
-  background: #46876D;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
+  background: #ebebeb; }
 
 .slider-menu__toggler span {
   left: 8px; }
@@ -814,7 +812,7 @@ kbd {
   content: "";
   width: 28px;
   height: 2.5px;
-  background: #f7f7f7;
+  background: #46876D;
   border-radius: 20px;
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1); }
 
@@ -829,7 +827,7 @@ kbd {
 
 .slider-menu__toggler.active > span::before,
 .slider-menu__toggler.active > span::after {
-  background: #d1d1d1;
+  background: #2c5544;
   top: 0px; }
 
 .slider-menu__toggler.active > span::before {
@@ -1477,6 +1475,9 @@ kbd {
 .float-right {
   float: right; }
 
+.pos-relative {
+  position: relative; }
+
 .margin-auto {
   margin: 0 auto; }
 
@@ -1685,6 +1686,12 @@ ul {
   width: 15rem;
   height: 10rem; }
 
+.custom-logo {
+  max-width: 15rem; }
+  @media screen and (max-width: 850px) {
+    .custom-logo {
+      max-width: 12.5rem; } }
+
 .title-tag {
   font-size: 4.8rem;
   font-weight: 300;
@@ -1695,7 +1702,7 @@ ul {
     transition: all .3s; }
   @media screen and (max-width: 850px) {
     .title-tag {
-      font-size: 3.5rem; } }
+      font-size: 2.5rem; } }
 
 .sub-title {
   margin-bottom: 4rem; }
@@ -1733,10 +1740,25 @@ footer {
   left: 50%;
   bottom: 20%;
   transform: translate(-50%, -20%);
+  width: 100%;
   text-align: center;
   z-index: 99; }
+  @media (max-width: 755px) {
+    .hero--cta {
+      bottom: 0; } }
+  .hero--cta .button {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.8rem;
+    margin-top: 1rem; }
+    @media (max-width: 755px) {
+      .hero--cta .button {
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem; } }
   .hero--cta h2 {
     color: #f7f7f7; }
+    @media (max-width: 755px) {
+      .hero--cta h2 {
+        font-size: 1.8rem; } }
 
 .sidebar-item {
   background: #ebebeb;

@@ -37,6 +37,13 @@ ul {
     height: 10rem;;
 }
 
+.custom-logo {
+    max-width: 15rem;
+    @media screen and (max-width: $small) {
+        max-width: 12.5rem;
+    }
+}
+
 .title-tag {
     font-size: 4.8rem;
     font-weight: 300;
@@ -47,7 +54,7 @@ ul {
         transition: all .3s;
     }
     @media screen and (max-width: $small) {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -94,10 +101,26 @@ footer {
     left: 50%;
     bottom: 20%;
     transform: translate(-50%, -20%);
+    width: 100%;
     text-align: center;
     z-index: 99;
+    @media (max-width: 755px) {
+        bottom: 0;
+    }
+    .button {
+        padding: 1.5rem 2.5rem;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        @media (max-width: 755px) {
+            padding: 1rem 1.5rem;
+            font-size: 1.6rem;
+        }
+    }
     h2 {
         color: $color-white;
+        @media (max-width: 755px) {
+            font-size: 1.8rem;
+        }
     }
 }
 
